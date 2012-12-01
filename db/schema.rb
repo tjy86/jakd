@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121201181358) do
+ActiveRecord::Schema.define(:version => 20121201184640) do
 
   create_table "cards", :force => true do |t|
     t.integer "value"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20121201181358) do
     t.integer  "games_lost",      :default => 0
     t.float    "amt_wont",        :default => 0.0
     t.float    "amt_lost",        :default => 0.0
+    t.string   "hand"
   end
 
 end

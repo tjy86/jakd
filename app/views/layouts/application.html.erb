@@ -7,8 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">Jaked</a>
+    <ul class="nav">
+      <li class="active">
+      <li><%= link_to "Home", users_path %></li>
+      <li><%= link_to "Sign up", new_user_path %></li>
+      <li><%= show_dynamic_links %></li>
+      <li><%= link_to "Game page", game_path %></li>
+    </ul>
+  </div>
+</div>
+<div class='row'>
+  <div class='span9'>
+    <%= yield %>
+  </div>
+  <div class='span3'>
+   <%# render :submenu %>
+  </div>
+</div>
 
 </body>
 </html>

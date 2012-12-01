@@ -12,4 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require '/bootstrap/js/bootstrap.js'
+//= require 'game.js.erb'
+

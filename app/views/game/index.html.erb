@@ -1,0 +1,9 @@
+
+dealer: <div id='d_hand'></div>
+player 1:<div id='p1_hand'></div>
+
+$<span id='balance'><%= @user.balance %></span>
+<%= form_tag '/bet', :remote => true do %>
+  <%= text_field_tag 'bet','', :id => 'bet' %>
+  <%= button_tag 'deal', :id => 'new_game' %>
+<% end %>

@@ -1,6 +1,10 @@
 Jakd::Application.routes.draw do
   resources :users
-
+  get '/login' => 'session#new'
+  post '/login' => 'session#create'
+  get '/logout' => 'session#destroy'
+  get '/game' => 'game#index'
+  post '/bet' => 'game#bet'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
