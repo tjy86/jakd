@@ -18,6 +18,5 @@
 class User < ActiveRecord::Base
   has_secure_password
   mount_uploader :avatar, AvatarUploader
-
-  attr_accessible :avatar, :password_digest, :username
+  # attr_accessible :avatar, :password_digest, :username
 end
