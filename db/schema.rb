@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121201161358) do
+ActiveRecord::Schema.define(:version => 20121201181358) do
 
   create_table "cards", :force => true do |t|
     t.integer "value"
@@ -24,13 +24,13 @@ ActiveRecord::Schema.define(:version => 20121201161358) do
     t.string   "username"
     t.string   "password_digest"
     t.string   "avatar"
-    t.float    "balance"
-    t.integer  "games_won"
-    t.integer  "games_lost"
-    t.float    "amt_won"
-    t.float    "amt_lost"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
+    t.float    "balance",         :default => 1000.0
+    t.integer  "games_won",       :default => 0
+    t.integer  "games_lost",      :default => 0
+    t.float    "amt_wont",        :default => 0.0
+    t.float    "amt_lost",        :default => 0.0
   end
 
 end
