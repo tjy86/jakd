@@ -5,7 +5,7 @@ Jakd::Application.routes.draw do
   get '/logout' => 'session#destroy'
   get '/game' => 'game#index'
   post '/bet' => 'game#bet'
-
+  post '/hit' => 'game#hit'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

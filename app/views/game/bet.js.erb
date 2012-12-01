@@ -1,9 +1,28 @@
+$('#deal').hide();
 
 $('#balance').empty();
 $('#balance').append(<%= @bal %>);
 
-$('#d_hand').empty();
-$('#d_hand').append(<%= @d_hand %>);
+$('#p_hand').empty();
+<% @p_hand.each do |x| %>
+  $('#p_hand').append('<%= x.face %>');
+  $('#p_hand').append('<%= x.suit %>');
+<% end %>
 
-$('#p1_hand').empty();
-$('#p1_hand').append(<%= @p_hand %>);
+$('#p_value').empty();
+$('#p_value').append('<%= @p_value %>');
+
+$('#d_hand').empty();
+<% @d_hand.each do |x| %>
+  $('#d_hand').append('<%= x.face %>');
+  $('#d_hand').append('<%= x.suit %>');
+<% end %>
+
+$('#d_value').empty();
+$('#d_value').append('<%= @d_value %>');
+
+// $('#d_hand').empty();
+// $('#d_hand').append(<%= @d_hand %>);
+
+// $('#p1_hand').empty();
+// $('#p1_hand').append(<%= @p_hand %>);
