@@ -1,0 +1,33 @@
+// dealer hand
+$('#d_hand').empty();
+<% $d_hand.each do |x| %>
+  $('#d_hand').append("<div class='card'><%= x.face %><br><%= x.suit %></div>");
+<% end %>
+$('#d_hand').append("<div class='clear'></div>");
+// dealer value of one car
+$('#d_value').empty();
+$('#d_value').append('<%= $d_hand[0].value %>');
+
+// player hand
+$('#p_hand').empty();
+<% $p_hand.each do |x| %>
+  $('#p_hand').append("<div class='card'><%= x.face %><br><%= x.suit %></div>");
+<% end %>
+$('#p_hand').append("<div class='clear'></div>");
+// player value
+$('#p_value').empty();
+$('#p_value').append('<%= $p_value %>');
+
+
+// text to win
+$('#d_hand').before('YOU WIN!')
+// execute refresh in 1 second
+// setTimeout(refresh,1000);
+
+function refresh () {
+  $('#deal').show();
+  $('#p_hand').empty();
+  $('#d_hand').empty();
+  $('#p_value').empty();
+  $('#d_value').empty();
+}

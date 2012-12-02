@@ -3,9 +3,12 @@ Jakd::Application.routes.draw do
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   get '/logout' => 'session#destroy'
-  get '/game' => 'game#index'
-  post '/bet' => 'game#bet'
-  post '/hit' => 'game#hit'
+  get '/card' => 'card#index'
+  post '/bet' => 'card#bet'
+  post '/hit' => 'card#hit'
+  post '/stay' => 'card#stay'
+  get '/win' => 'card#win'
+  get '/bust' => 'card#bust'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

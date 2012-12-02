@@ -9,18 +9,18 @@
 <body>
 <div class="navbar">
   <div class="navbar-inner">
-    <a class="brand" href="#">Jaked</a>
+    <a class="brand" href="#">Jakd</a>
     <ul class="nav">
       <li class="active">
       <li><%= link_to "Home", users_path %></li>
       <li><%= link_to "Sign up", new_user_path %></li>
       <li><%= show_dynamic_links %></li>
-      <li><%= link_to "Game page", game_path %></li>
+      <li><%= link_to "Game page", card_path %></li>
     </ul>
   </div>
 </div>
 <div class='row'>
-  <div class='span9'>
+  <div class='span9 offset2'>
     <%= yield %>
   </div>
   <div class='span3'>

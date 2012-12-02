@@ -1,0 +1,18 @@
+
+<h1>Dealer</h1> <div id='d_hand' class='hand'></div>
+<h3>Total</h3><span id='d_value'></span>
+<br><br>
+<h1>Player 1</h1><div id='p_hand' class='hand'></div>
+<h3>Total</h3><span id='p_value'></span>
+<br><br>
+
+$<span id='balance'><%= @user.balance %></span>
+
+
+<%= form_tag '/bet', :id => 'deal', :remote => true do %>
+  <%= text_field_tag 'bet','', :id => 'bet' %>
+  <%= button_tag 'deal', :id => 'new_game' %>
+<% end %>
+
+<%= button_to 'hit', '/hit', :remote => true %>
+<%= button_to 'stay', '/stay', :remote => true %>
