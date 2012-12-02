@@ -1,0 +1,26 @@
+// hides bet form
+$('#deal').hide();
+
+// adjusts the user balance
+$('#balance').empty();
+$('#balance').append(<%= @bal %>);
+
+// dealer hand, one showing, one blank
+$('#d_hand').empty();
+$('#d_hand').append("<div class='card'><%= $d_hand[0].face %><br><%= $d_hand[0].suit %></div>");
+$('#d_hand').append("<div class='dealer_card'></div>");
+$('#d_hand').append("<div class='clear'></div>");
+// dealer value of one car
+$('#d_value').empty();
+$('#d_value').append('<%= $d_hand[0].value %>');
+
+// player hand, two cards showing
+$('#p_hand').empty();
+<% $p_hand.each do |x| %>
+  $('#p_hand').append("<div class='card'><%= x.face %><br><%= x.suit %></div>");
+<% end %>
+$('#p_hand').append("<div class='clear'></div>");
+// player value
+$('#p_value').empty();
+$('#p_value').append('<%= $p_value %>');
+

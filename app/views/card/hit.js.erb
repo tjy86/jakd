@@ -1,0 +1,11 @@
+
+$('#p_hand').empty();
+<% $p_hand.each do |x| %>
+  $('#p_hand').append("<div class='card'><%= x.face %><br><%= x.suit %></div>");
+<% end %>
+$('#p_hand').append("<div class='clear'></div>");
+
+
+$('#p_value').empty();
+$('#p_value').append('<%= $p_value %>');
+

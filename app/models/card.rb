@@ -10,5 +10,6 @@
 #
 
 class Card < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :value, :suit, :face, :photo
+
 end
