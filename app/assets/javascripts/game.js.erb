@@ -1,3 +1,15 @@
 $(function(){
-
+  $('#stay_bool').val('0');
+  $('#stay_bool').hide();
+  setInterval(staycheck,1000);
 });
+
+function staycheck() {
+  if ($('#stay_bool').val()==1){
+    dealerhit;
+  }
+}
+
+// function dealerhit () {
+
+// }

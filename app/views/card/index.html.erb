@@ -16,3 +16,5 @@ $<span id='balance'><%= @user.balance %></span>
 
 <%= button_to 'hit', '/hit', :remote => true %>
 <%= button_to 'stay', '/stay', :remote => true %>
+
+<input type='text' type='hidden' value=0 id='stay_bool'>

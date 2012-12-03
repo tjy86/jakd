@@ -7,6 +7,7 @@ Jakd::Application.routes.draw do
   post '/bet' => 'card#bet'
   post '/hit' => 'card#hit'
   post '/stay' => 'card#stay'
+  post '/dealerhit' => 'card#dealer_hit'
   get '/win' => 'card#win'
   get '/bust' => 'card#bust'
   # The priority is based upon order of creation:

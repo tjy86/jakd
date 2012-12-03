@@ -31,23 +31,22 @@ class CardController < ApplicationController
     check($p_value)
   end
 
-  //start
+  # //start
   def dealer_hit
 
   end
   def stay
-    check($p_value)
-    while $d_value < 17
+    if $d_value < 17
       $d_hand << $cards.pop
-      redirect_to dealer_hit
+      $d_value = sum_cards($d_hand)
     end
 
-    //end
-    if $p_value > $d_value
-      redirect_to win_path
-    else
-      redirect_to bust_path
-    end
+    # //end
+    # if $p_value > $d_value
+    #   redirect_to win_path
+    # else
+    #   redirect_to bust_path
+    # end
   end
   def win
   end
